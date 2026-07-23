@@ -11,6 +11,10 @@ import (
 )
 
 func configure64bitsTimeOn32BitsArchitectures() {
+	if forceTime32ForLegacyAndroidSeccomp {
+		use64bitsTimeOn32bits = false
+		return
+	}
 	use64bitsTimeOn32bits = getKernelVersion().GE(5, 1)
 }
 
