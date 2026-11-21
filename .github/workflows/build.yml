@@ -4,13 +4,6 @@ permissions:
   contents: write
 
 on:
-  push:
-    branches:
-      - tailscale
-      - 'tailscale.go1.26'
-  pull_request:
-    branches:
-      - '*'
   workflow_dispatch:
     inputs:
       ref:
